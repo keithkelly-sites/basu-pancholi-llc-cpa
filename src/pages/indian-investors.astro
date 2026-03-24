@@ -1,0 +1,441 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import himalayaImg from '../assets/images/6b0b63_3a2ad91a050e4476a25895297ccc0baa-mv2.jpg';
+import businessOwnerImg from '../assets/images/cdd319_368c3c224abf460592034bb06de62edd-mv2.jpg';
+---
+
+<Layout title="CPA for Indian Investors | Basu Pancholi LLC" description="CPA services for Indian investors buying U.S. businesses. Cross-border tax compliance, entity formation, and U.S.-India tax treaty navigation. Led by a CPA with background in both India and the United States.">
+
+  <!-- Full-bleed hero with Himalayan imagery -->
+  <section class="india-hero" aria-label="CPA services for Indian investors">
+    <div class="india-hero-bg">
+      <Image
+        src={himalayaImg}
+        alt="Himalayan mountains with prayer flags, symbolizing the connection between India and the United States"
+        layout="constrained"
+        width={800}
+        height={600}
+        loading="eager"
+        fetchpriority="high"
+      />
+    </div>
+    <div class="india-hero-overlay"></div>
+    <div class="india-hero-content">
+      <div class="container">
+        <p class="section-label" style="color: var(--gold-bright);">Specialty Practice</p>
+        <h1>CPA Services for Indian<br />Investors in the U.S.</h1>
+        <p class="india-hero-sub">Led by an experienced CPA with a background in both India and the United States. We understand the unique needs of Indian companies and investors entering the U.S. market.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="india-intro">
+    <div class="container">
+      <div class="india-intro-content reveal">
+        <p class="lead-text">
+          Expanding from India into the United States brings incredible opportunity, but it also comes with complex tax and compliance challenges. At Basu Pancholi LLC, we specialize in helping Indian investors and business owners navigate U.S. tax law, entity formation, and cross-border compliance.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Challenges -->
+  <section class="challenges" aria-labelledby="challenges-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Common Hurdles</p>
+        <h2 id="challenges-heading">What Indian business owners face when moving into the U.S.</h2>
+      </div>
+      <div class="challenge-grid stagger">
+        <div class="challenge-card">
+          <span class="challenge-icon">01</span>
+          <h3>U.S.-India Tax Treaties</h3>
+          <p>Navigating the complex tax treaty between the two countries to avoid double taxation and ensure compliance on both sides.</p>
+        </div>
+        <div class="challenge-card">
+          <span class="challenge-icon">02</span>
+          <h3>Entity Structure</h3>
+          <p>Choosing the right entity structure for tax efficiency and liability protection when operating across borders.</p>
+        </div>
+        <div class="challenge-card">
+          <span class="challenge-icon">03</span>
+          <h3>Transfer Pricing</h3>
+          <p>Ensuring transfer pricing compliance between related entities in India and the U.S. to avoid penalties and audits.</p>
+        </div>
+        <div class="challenge-card">
+          <span class="challenge-icon">04</span>
+          <h3>FBAR &amp; FATCA</h3>
+          <p>Meeting foreign account reporting requirements and staying compliant with FATCA obligations for U.S. tax purposes.</p>
+        </div>
+        <div class="challenge-card">
+          <span class="challenge-icon">05</span>
+          <h3>Repatriation</h3>
+          <p>Tax-efficient strategies for repatriating profits from U.S. operations back to India while minimizing tax burden.</p>
+        </div>
+        <div class="challenge-card">
+          <span class="challenge-icon">06</span>
+          <h3>State Compliance</h3>
+          <p>Understanding nexus rules, state tax obligations, and multi-state compliance requirements for new U.S. operations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Help -->
+  <section class="how-we-help" aria-labelledby="help-heading">
+    <div class="container">
+      <div class="help-layout">
+        <div class="help-content reveal">
+          <p class="section-label">How We Help</p>
+          <h2 id="help-heading">Your bridge from India to the United States.</h2>
+          <p>Our firm provides end-to-end support for Indian investors at every stage of their U.S. business journey. From initial planning to ongoing compliance, we handle the accounting so you can focus on growing your business.</p>
+
+          <ul class="help-list">
+            <li>
+              <strong>Entity Formation</strong>
+              <span>LLC, S-Corp, C-Corp setup with cross-border tax optimization</span>
+            </li>
+            <li>
+              <strong>Tax Preparation</strong>
+              <span>U.S. federal and state returns with treaty-position reporting</span>
+            </li>
+            <li>
+              <strong>Cross-Border Planning</strong>
+              <span>Strategies that minimize total tax burden across both countries</span>
+            </li>
+            <li>
+              <strong>Compliance</strong>
+              <span>FBAR, FATCA, transfer pricing documentation, and state filings</span>
+            </li>
+            <li>
+              <strong>Ongoing Advisory</strong>
+              <span>Year-round support as your U.S. operations grow and evolve</span>
+            </li>
+          </ul>
+        </div>
+        <div class="help-image reveal">
+          <Image
+            src={businessOwnerImg}
+            alt="Small business owner, representing the entrepreneurs we serve"
+            layout="constrained"
+            width={400}
+            height={600}
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consultation Options -->
+  <section class="consult-options" aria-labelledby="consult-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Get Started</p>
+        <h2 id="consult-heading">Consultations available in person, by phone, or by video.</h2>
+      </div>
+      <div class="consult-grid stagger">
+        <div class="consult-card">
+          <div class="consult-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/></svg>
+          </div>
+          <h3>WhatsApp</h3>
+          <p>Connect with us on WhatsApp for quick questions and scheduling from anywhere in the world.</p>
+        </div>
+        <div class="consult-card">
+          <div class="consult-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+          </div>
+          <h3>Zoom</h3>
+          <p>Virtual consultations via Zoom for face-to-face meetings regardless of your location in India or the U.S.</p>
+        </div>
+        <div class="consult-card">
+          <div class="consult-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>In Person</h3>
+          <p>Visit our Pittsburgh office at 1121 Boyce Road, Suite 800A, in the South Hills area.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="india-cta">
+    <div class="container">
+      <div class="cta-block reveal">
+        <h2>Expanding into the U.S.?</h2>
+        <p>Let's talk about your specific situation. The first consultation is on us.</p>
+        <div class="cta-actions">
+          <a href="/contact" class="btn btn--gold">Request a Consultation</a>
+          <a href="tel:4127201313" class="btn btn--outline">Call 412-720-1313</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* ===== HERO ===== */
+  .india-hero {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  .india-hero-bg {
+    position: absolute;
+    inset: 0;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+      animation: india-hero-drift 25s ease-in-out infinite alternate;
+    }
+  }
+
+  @keyframes india-hero-drift {
+    0% { transform: scale(1.05); }
+    100% { transform: scale(1.12) translateY(-15px); }
+  }
+
+  .india-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      oklch(0.14 0.03 260 / 0.95) 0%,
+      oklch(0.18 0.04 260 / 0.6) 40%,
+      oklch(0.20 0.03 260 / 0.3) 70%,
+      transparent 100%
+    );
+  }
+
+  .india-hero-content {
+    position: relative;
+    z-index: 2;
+    padding-bottom: var(--space-xl);
+  }
+
+  .india-hero h1 {
+    font-size: var(--text-4xl);
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+
+  .india-hero-sub {
+    font-size: var(--text-lg);
+    color: var(--cream);
+    max-width: 50ch;
+    line-height: 1.7;
+  }
+
+  /* ===== INTRO ===== */
+  .india-intro {
+    padding: var(--space-xl) 0;
+    border-bottom: 1px solid oklch(0.24 0.02 260);
+  }
+
+  .lead-text {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    line-height: 1.4;
+    color: var(--cream);
+    max-width: 50ch;
+  }
+
+  /* ===== CHALLENGES ===== */
+  .challenges {
+    padding: var(--space-2xl) 0;
+  }
+
+  .challenge-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    background: oklch(0.24 0.02 260);
+    border: 1px solid oklch(0.24 0.02 260);
+  }
+
+  @media (min-width: 600px) {
+    .challenge-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 900px) {
+    .challenge-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .challenge-card {
+    background: var(--bg-primary);
+    padding: 2rem;
+  }
+
+  .challenge-icon {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--gold-dim);
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .challenge-card h3 {
+    font-size: var(--text-lg);
+    margin-bottom: 0.5rem;
+  }
+
+  .challenge-card p {
+    font-size: var(--text-sm);
+    color: var(--cream-dim);
+  }
+
+  /* ===== HOW WE HELP ===== */
+  .how-we-help {
+    padding: var(--space-xl) 0;
+    background: var(--charcoal);
+  }
+
+  .help-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .help-layout {
+      grid-template-columns: 3fr 2fr;
+    }
+  }
+
+  .help-content h2 {
+    margin-bottom: 1rem;
+  }
+
+  .help-content > p {
+    color: var(--cream-dim);
+    margin-bottom: 2rem;
+  }
+
+  .help-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .help-list li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding-left: 1.25rem;
+    border-left: 1px solid var(--gold-dim);
+  }
+
+  .help-list strong {
+    font-size: var(--text-base);
+    color: var(--cream);
+    font-weight: 600;
+  }
+
+  .help-list span {
+    font-size: var(--text-sm);
+    color: var(--cream-dim);
+  }
+
+  .help-image {
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(30%) contrast(1.05);
+    }
+  }
+
+  /* ===== CONSULTATION OPTIONS ===== */
+  .consult-options {
+    padding: var(--space-xl) 0;
+  }
+
+  .consult-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .consult-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .consult-card {
+    padding: 2rem;
+    border: 1px solid oklch(0.30 0.02 260);
+    transition: border-color var(--duration-fast);
+  }
+
+  .consult-card:hover {
+    border-color: var(--gold-dim);
+  }
+
+  .consult-icon {
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .consult-card h3 {
+    font-size: var(--text-lg);
+    margin-bottom: 0.5rem;
+  }
+
+  .consult-card p {
+    font-size: var(--text-sm);
+    color: var(--cream-dim);
+  }
+
+  /* ===== CTA ===== */
+  .india-cta {
+    padding: var(--space-xl) 0;
+  }
+
+  .cta-block {
+    text-align: center;
+    padding: var(--space-xl);
+    background: var(--charcoal);
+    border: 1px solid oklch(0.30 0.02 260);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .cta-block h2 { margin-bottom: 0.5rem; }
+
+  .cta-block p {
+    color: var(--cream-dim);
+    margin: 0 auto 2rem;
+    font-size: var(--text-lg);
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>

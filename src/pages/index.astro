@@ -1,0 +1,882 @@
+---
+/**
+ * DESIGN CONCEPT: "The Bridge"
+ *
+ * Inspired by EisnerAmper's dark sophistication and the Awwwards trend of
+ * oversized editorial serif typography on deep dark backgrounds. The firm's
+ * tagline "The bridge between you and your success" becomes the visual system.
+ *
+ * The hero splits into two masses — the partners' names in enormous thin serif
+ * at 12vw stacked vertically, with a single gold horizontal line (the "bridge")
+ * cutting across the viewport. Dark navy base with burnished gold accents
+ * throughout. Financial imagery gets a high-contrast duotone treatment.
+ *
+ * References: EisnerAmper (dark + editorial type), Davis Martindale (partner
+ * personality forward), Awwwards typography-heavy category (oversized serif
+ * on dark), CSS-Tricks scroll-driven animation parallax technique.
+ */
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import heroImg from '../assets/images/95d9be60e88844eaa92ed30f871d5bae.jpg';
+import taxImg from '../assets/images/6b0b63_8ee80ad0ea1d45548c3b657728b0a868-mv2.jpg';
+import bookkeepImg from '../assets/images/6b0b63_27178104b2b24d98b570c6a4f17d8c07-mv2.jpg';
+import payrollImg from '../assets/images/40e00778f2b94649b7bf2a64906c4e2c.jpg';
+import irsImg from '../assets/images/469e00d2afd84d4998eb3742185505b1.jpg';
+import startupImg from '../assets/images/6b0b63_845efd2e71a04adf9a145bb95046fd4f-mv2.jpg';
+import advisoryImg from '../assets/images/9441146dbd3b4a31a35f513916b26942.jpg';
+import handshakeImg from '../assets/images/4cb2411121d14cab94fb4cfb11f4f056.jpg';
+import himalayaImg from '../assets/images/6b0b63_3a2ad91a050e4476a25895297ccc0baa-mv2.jpg';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "name": "Basu Pancholi LLC CPA",
+  "url": "https://basu-pancholi-llc-cpa.keithkelly.dev",
+  "telephone": "412-720-1313",
+  "email": "basupancholillc@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1121 Boyce Road, Suite 800A",
+    "addressLocality": "Pittsburgh",
+    "addressRegion": "PA",
+    "postalCode": "15241",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  },
+  "sameAs": [
+    "https://www.facebook.com/basupancholillc/",
+    "https://twitter.com/BasuPancholiCPA",
+    "https://www.youtube.com/channel/UCas_sedCruUO2DiHJsHTboA"
+  ]
+};
+---
+
+<Layout title="Basu Pancholi LLC CPA | Pittsburgh Certified Public Accountants">
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-bg">
+      <Image
+        src={heroImg}
+        alt="Financial analysis and planning at Basu Pancholi CPA"
+        layout="constrained"
+        width={1280}
+        height={828}
+        loading="eager"
+        fetchpriority="high"
+      />
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-names">
+        <span class="hero-name" aria-hidden="true">Basu</span>
+        <span class="hero-name" aria-hidden="true">Pancholi</span>
+      </div>
+      <div class="hero-bridge" aria-hidden="true"></div>
+      <div class="hero-info">
+        <p class="hero-subtitle">Certified Public Accountants</p>
+        <h1 class="sr-only">Basu Pancholi LLC — Pittsburgh Certified Public Accountants</h1>
+        <p class="hero-tagline">The bridge between you<br />and your success.</p>
+        <div class="hero-actions">
+          <a href="/contact" class="btn btn--gold">Request a Consultation</a>
+          <a href="tel:4127201313" class="btn btn--outline">412-720-1313</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+        <rect x="1" y="1" width="14" height="22" rx="7" stroke="currentColor" stroke-width="1.5"/>
+        <circle class="scroll-dot" cx="8" cy="8" r="2" fill="currentColor"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== TRUST BAR ===== -->
+  <section class="trust-bar" aria-label="Quick facts">
+    <div class="container">
+      <div class="trust-items">
+        <div class="trust-item">
+          <span class="stat-number">10+</span>
+          <span class="trust-label">Years Serving Pittsburgh</span>
+        </div>
+        <div class="trust-divider" aria-hidden="true"></div>
+        <div class="trust-item">
+          <span class="stat-number">10+</span>
+          <span class="trust-label">Industries Served</span>
+        </div>
+        <div class="trust-divider" aria-hidden="true"></div>
+        <div class="trust-item">
+          <span class="stat-number">2</span>
+          <span class="trust-label">Dedicated CPAs</span>
+        </div>
+        <div class="trust-divider" aria-hidden="true"></div>
+        <div class="trust-item">
+          <span class="stat-number">US/IN</span>
+          <span class="trust-label">Cross-Border Expertise</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services-section" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">What We Do</p>
+        <h2 id="services-heading">Trusted accounting, taxes,<br />IRS help, and payroll services.</h2>
+      </div>
+
+      <div class="services-grid stagger">
+        <a href="/services#taxes" class="service-card">
+          <div class="service-image duotone">
+            <Image src={taxImg} alt="Tax preparation services" layout="constrained" width={308} height={340} loading="lazy" />
+          </div>
+          <div class="service-body">
+            <h3>Taxes</h3>
+            <p>Individual and business tax preparation and planning. Federal, state, and local returns for LLCs, partnerships, corporations, trusts, and non-profits.</p>
+          </div>
+          <span class="service-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+
+        <a href="/services#bookkeeping" class="service-card">
+          <div class="service-image duotone">
+            <Image src={bookkeepImg} alt="Bookkeeping and accounting services" layout="constrained" width={312} height={340} loading="lazy" />
+          </div>
+          <div class="service-body">
+            <h3>Bookkeeping</h3>
+            <p>Financial statement preparation, monthly reporting, accounting system setup. We handle your books so you can focus on your business.</p>
+          </div>
+          <span class="service-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+
+        <a href="/services#payroll" class="service-card">
+          <div class="service-image duotone">
+            <Image src={payrollImg} alt="Payroll services" layout="constrained" width={311} height={340} loading="lazy" />
+          </div>
+          <div class="service-body">
+            <h3>Payroll</h3>
+            <p>Full payroll system with direct deposit, tax deposits, quarterly and annual returns. Flexible services, as much or as little as you need.</p>
+          </div>
+          <span class="service-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+
+        <a href="/services#irs" class="service-card">
+          <div class="service-image duotone">
+            <Image src={irsImg} alt="IRS representation" layout="constrained" width={312} height={340} loading="lazy" />
+          </div>
+          <div class="service-body">
+            <h3>IRS Representation</h3>
+            <p>Audit defense, tax resolution, offers in compromise, penalty abatement, and installment agreements. We stand between you and the IRS.</p>
+          </div>
+          <span class="service-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+
+        <a href="/services#startups" class="service-card">
+          <div class="service-image duotone">
+            <Image src={startupImg} alt="Business start-up consulting" layout="constrained" width={312} height={340} loading="lazy" />
+          </div>
+          <div class="service-body">
+            <h3>Business Start-Ups</h3>
+            <p>LLC formation, S-Corp structuring, entity selection, and tax setup. Everything to get your business operational from day one.</p>
+          </div>
+          <span class="service-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+
+        <a href="/services#advisory" class="service-card">
+          <div class="service-image duotone">
+            <Image src={advisoryImg} alt="Advisory and assurance services" layout="constrained" width={312} height={340} loading="lazy" />
+          </div>
+          <div class="service-body">
+            <h3>Advisory &amp; Assurance</h3>
+            <p>Audits, reviews, compilations, financial projections, and strategic consulting. Objective analysis to control costs and increase efficiency.</p>
+          </div>
+          <span class="service-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="services-cta reveal">
+        <a href="/services" class="btn btn--outline">View All Services &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT TEASER ===== -->
+  <section class="about-teaser" aria-labelledby="about-heading">
+    <div class="about-image-wrap reveal">
+      <Image
+        src={handshakeImg}
+        alt="Professional handshake representing partnership and trust"
+        layout="constrained"
+        width={640}
+        height={640}
+        loading="lazy"
+      />
+    </div>
+    <div class="about-content">
+      <div class="reveal">
+        <p class="section-label">About Our Firm</p>
+        <h2 id="about-heading">Locally owned. Personally invested.</h2>
+        <p class="about-text">
+          Basu Pancholi LLC is a locally owned and managed CPA firm in the South Hills area of Pittsburgh. We know the ins and outs of the accounting side of your business. We help small business owners maximize their wealth and minimize their taxes.
+        </p>
+        <p class="about-text">
+          We work closely with you to preserve your business. Everyone needs help, especially with the big decisions. Let us help you with yours.
+        </p>
+        <a href="/about" class="btn btn--outline">Our Story &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INDIAN INVESTORS CALLOUT ===== -->
+  <section class="india-callout" aria-labelledby="india-heading">
+    <div class="india-bg">
+      <Image
+        src={himalayaImg}
+        alt="Himalayan mountains with prayer flags, representing the bridge between India and the United States"
+        layout="constrained"
+        width={800}
+        height={600}
+        loading="lazy"
+      />
+    </div>
+    <div class="india-overlay"></div>
+    <div class="container india-content reveal">
+      <p class="section-label" style="color: var(--gold-bright);">Specialty Practice</p>
+      <h2 id="india-heading">CPA Services for Indian<br />Investors in the U.S.</h2>
+      <p>
+        Led by a CPA with a background in both India and the United States, our firm understands the unique needs of Indian companies and investors entering the U.S. market. From entity formation to cross-border tax compliance.
+      </p>
+      <a href="/indian-investors" class="btn btn--gold">Learn More &rarr;</a>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">What Our Clients Say</p>
+        <h2 id="testimonials-heading">We strive to make our<br />clients feel like #1.</h2>
+      </div>
+
+      <div class="testimonial-grid stagger">
+        <blockquote class="testimonial-card">
+          <p class="testimonial-text">&ldquo;Basu and Viral have been taking care of my business for a long time now. It doesn't seem like they are CPA's for me but instead they are friends and brothers now. They advise me which is good for my business and for me and I am lucky to have them.&rdquo;</p>
+          <footer class="testimonial-author">
+            <span class="testimonial-name">Vijay Kumar</span>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial-card">
+          <p class="testimonial-text">&ldquo;We had hired them for our seven companies to do all of our accounting. We found them to be the best at what they do. We are really impressed with their professional job.&rdquo;</p>
+          <footer class="testimonial-author">
+            <span class="testimonial-name">Ifren Syed</span>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial-card">
+          <p class="testimonial-text">&ldquo;I have been doing all my accounting stuff with Basu Pancholi since long time. So professional, explained each and all stuff. Thanks guys for the service.&rdquo;</p>
+          <footer class="testimonial-author">
+            <span class="testimonial-name">Bhupal Rai</span>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INDUSTRIES ===== -->
+  <section class="industries" aria-labelledby="industries-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Industries We Help</p>
+        <h2 id="industries-heading">Serving businesses across Pittsburgh.</h2>
+      </div>
+      <div class="industry-tags stagger">
+        <span class="industry-tag">Healthcare</span>
+        <span class="industry-tag">Retail</span>
+        <span class="industry-tag">Wholesale</span>
+        <span class="industry-tag">Restaurants</span>
+        <span class="industry-tag">Real Estate</span>
+        <span class="industry-tag">Bars &amp; Nightlife</span>
+        <span class="industry-tag">Auto Dealers</span>
+        <span class="industry-tag">Recreation</span>
+        <span class="industry-tag">Gas Stations</span>
+        <span class="industry-tag">Non-Profits</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="final-cta" aria-label="Get started">
+    <div class="container">
+      <div class="cta-inner reveal">
+        <h2>Ready to talk?</h2>
+        <p>Request a consultation. We'll take it from there.</p>
+        <div class="cta-actions">
+          <a href="/contact" class="btn btn--gold">Request a Consultation</a>
+          <a href="tel:4127201313" class="btn btn--outline">Call 412-720-1313</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* ===== HERO ===== */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(80%) brightness(0.25) contrast(1.2);
+      animation: hero-drift 30s ease-in-out infinite alternate;
+    }
+  }
+
+  @keyframes hero-drift {
+    0% { transform: scale(1.05) translateY(0); }
+    100% { transform: scale(1.1) translateY(-20px); }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: var(--container-max);
+    padding-inline: var(--container-pad);
+    text-align: center;
+  }
+
+  .hero-names {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0.9;
+    margin-bottom: clamp(1rem, 2vw, 2rem);
+  }
+
+  .hero-name {
+    font-family: var(--font-display);
+    font-size: var(--text-hero);
+    color: var(--cream);
+    letter-spacing: -0.03em;
+    opacity: 0;
+    animation: name-reveal 1.2s var(--ease-out) forwards;
+  }
+
+  .hero-name:last-child {
+    animation-delay: 0.2s;
+  }
+
+  @keyframes name-reveal {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+      filter: blur(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+
+  .hero-bridge {
+    width: min(80%, 700px);
+    height: 1px;
+    margin: clamp(0.5rem, 1.5vw, 1.5rem) auto;
+    background: var(--gold);
+    opacity: 0;
+    transform: scaleX(0);
+    animation: bridge-draw 1s var(--ease-out) 0.6s forwards;
+    box-shadow: 0 0 20px oklch(0.72 0.12 75 / 0.4);
+  }
+
+  @keyframes bridge-draw {
+    to {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+
+  .hero-info {
+    opacity: 0;
+    animation: name-reveal 1s var(--ease-out) 0.9s forwards;
+  }
+
+  .hero-subtitle {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-tagline {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-2xl);
+    color: var(--cream-dim);
+    margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+    max-width: none;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--slate);
+    font-size: var(--text-xs);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: name-reveal 1s var(--ease-out) 1.5s forwards;
+  }
+
+  .scroll-dot {
+    animation: scroll-bob 2s ease-in-out infinite;
+  }
+
+  @keyframes scroll-bob {
+    0%, 100% { cy: 8; }
+    50% { cy: 16; }
+  }
+
+  /* ===== TRUST BAR ===== */
+  .trust-bar {
+    border-top: 1px solid oklch(0.30 0.02 260);
+    border-bottom: 1px solid oklch(0.30 0.02 260);
+    padding: var(--space-md) 0;
+    background: var(--charcoal);
+  }
+
+  .trust-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1.5rem, 3vw, 3rem);
+    flex-wrap: wrap;
+  }
+
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    text-align: center;
+  }
+
+  .trust-label {
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--cream-dim);
+  }
+
+  .trust-divider {
+    width: 1px;
+    height: 2.5rem;
+    background: oklch(0.30 0.02 260);
+  }
+
+  @media (max-width: 600px) {
+    .trust-items { gap: 1rem; }
+    .trust-divider { display: none; }
+    .trust-item { flex: 1 1 40%; }
+  }
+
+  /* ===== SECTION HEADERS ===== */
+  .section-label {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .section-header h2 {
+    max-width: 18ch;
+  }
+
+  /* ===== SERVICES ===== */
+  .services-section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    background: oklch(0.30 0.02 260);
+    border: 1px solid oklch(0.30 0.02 260);
+  }
+
+  @media (min-width: 600px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 1000px) {
+    .services-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-primary);
+    padding: 0;
+    overflow: hidden;
+    transition: background var(--duration-base) var(--ease-out);
+    position: relative;
+  }
+
+  .service-card:hover {
+    background: var(--navy-light);
+  }
+
+  .service-image {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    position: relative;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--duration-slow) var(--ease-out);
+    }
+  }
+
+  .service-card:hover .service-image img {
+    transform: scale(1.05);
+  }
+
+  .service-body {
+    padding: 1.5rem;
+    flex: 1;
+  }
+
+  .service-body h3 {
+    font-size: var(--text-xl);
+    margin-bottom: 0.5rem;
+    transition: color var(--duration-fast);
+  }
+
+  .service-card:hover .service-body h3 {
+    color: var(--gold);
+  }
+
+  .service-body p {
+    font-size: var(--text-sm);
+    color: var(--cream-dim);
+    line-height: 1.6;
+  }
+
+  .service-arrow {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.25rem;
+    color: var(--gold);
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+
+  .service-card:hover .service-arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .services-cta {
+    text-align: center;
+    margin-top: var(--space-lg);
+  }
+
+  /* ===== ABOUT TEASER ===== */
+  .about-teaser {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 60vh;
+  }
+
+  @media (min-width: 768px) {
+    .about-teaser {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .about-image-wrap {
+    overflow: hidden;
+    position: relative;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 300px;
+      filter: grayscale(40%) contrast(1.05);
+      transition: filter var(--duration-slow);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        transparent 60%,
+        var(--navy) 100%
+      );
+      pointer-events: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .about-image-wrap::after {
+      background: linear-gradient(
+        to bottom,
+        transparent 60%,
+        var(--navy) 100%
+      );
+    }
+  }
+
+  .about-content {
+    display: flex;
+    align-items: center;
+    padding: var(--space-xl) var(--container-pad);
+  }
+
+  .about-text {
+    color: var(--cream-dim);
+    margin-bottom: 1rem;
+    font-size: var(--text-base);
+  }
+
+  .about-content .btn {
+    margin-top: 1rem;
+  }
+
+  /* ===== INDIAN INVESTORS CALLOUT ===== */
+  .india-callout {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin: var(--space-2xl) 0;
+  }
+
+  .india-bg {
+    position: absolute;
+    inset: 0;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      animation: india-parallax linear;
+      animation-timeline: view();
+      animation-range: entry 0% exit 100%;
+    }
+  }
+
+  @keyframes india-parallax {
+    from { transform: translateY(-40px) scale(1.1); }
+    to { transform: translateY(40px) scale(1.1); }
+  }
+
+  .india-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      oklch(0.12 0.04 260 / 0.88) 0%,
+      oklch(0.18 0.03 260 / 0.7) 50%,
+      oklch(0.20 0.06 75 / 0.5) 100%
+    );
+  }
+
+  .india-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+  }
+
+  .india-content h2 {
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .india-content p {
+    color: var(--cream);
+    margin-bottom: 1.5rem;
+    font-size: var(--text-lg);
+    line-height: 1.7;
+  }
+
+  /* ===== TESTIMONIALS ===== */
+  .testimonials {
+    padding: var(--space-2xl) 0;
+  }
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .testimonial-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .testimonial-card {
+    background: var(--navy-light);
+    padding: 2rem;
+    border-left: 2px solid var(--gold);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .testimonial-text {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-lg);
+    color: var(--cream);
+    line-height: 1.6;
+    max-width: none;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .testimonial-name {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.03em;
+  }
+
+  /* ===== INDUSTRIES ===== */
+  .industries {
+    padding: var(--space-xl) 0;
+    border-top: 1px solid oklch(0.24 0.02 260);
+  }
+
+  .industry-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .industry-tag {
+    padding: 0.65em 1.4em;
+    border: 1px solid oklch(0.30 0.03 260);
+    font-size: var(--text-sm);
+    color: var(--cream-dim);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    transition: all var(--duration-fast) var(--ease-out);
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .industry-tag:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: oklch(0.72 0.12 75 / 0.06);
+  }
+
+  /* ===== FINAL CTA ===== */
+  .final-cta {
+    padding: var(--space-xl) 0;
+  }
+
+  .cta-inner {
+    text-align: center;
+    padding: var(--space-xl);
+    background: var(--charcoal);
+    border: 1px solid oklch(0.30 0.02 260);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .cta-inner h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-inner p {
+    color: var(--cream-dim);
+    margin: 0 auto 2rem;
+    font-size: var(--text-lg);
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>

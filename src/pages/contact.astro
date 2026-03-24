@@ -1,0 +1,352 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact | Basu Pancholi LLC CPA" description="Contact Basu Pancholi LLC CPA at 1121 Boyce Road, Suite 800A, Pittsburgh, PA 15241. Call 412-720-1313. Monday through Friday, 9am to 6pm.">
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-label">Contact</p>
+      <h1>Pittsburgh CPA near you.</h1>
+      <p class="page-intro">Our office is in Upper St. Clair, serving the entire Pittsburgh metro area. Drop in, call, or email.</p>
+    </div>
+  </section>
+
+  <div class="bridge-line"></div>
+
+  <section class="contact-main" aria-label="Contact information and form">
+    <div class="container contact-grid">
+
+      <!-- Contact Info -->
+      <address class="contact-info reveal">
+        <div class="info-block">
+          <h2 class="info-label">Address</h2>
+          <p class="info-value">1121 Boyce Road, Suite 800A<br />Pittsburgh, PA 15241</p>
+        </div>
+
+        <div class="info-block">
+          <h2 class="info-label">Phone</h2>
+          <p class="info-value"><a href="tel:4127201313">412-720-1313</a></p>
+        </div>
+
+        <div class="info-block">
+          <h2 class="info-label">Email</h2>
+          <p class="info-value"><a href="mailto:basupancholillc@gmail.com">basupancholillc@gmail.com</a></p>
+        </div>
+
+        <div class="info-block">
+          <h2 class="info-label">Hours</h2>
+          <div class="hours-grid">
+            <span class="hours-day">Monday - Friday</span>
+            <span class="hours-time">9:00 AM - 6:00 PM</span>
+            <span class="hours-day">Saturday - Sunday</span>
+            <span class="hours-time">Closed</span>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="map-wrap">
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=1121+Boyce+Road+Suite+800A+Pittsburgh+PA+15241"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="map-link"
+            aria-label="Get directions to Basu Pancholi LLC on Google Maps"
+          >
+            <img
+              src="/images/location-map.svg"
+              alt="Map showing location of Basu Pancholi LLC CPA at 1121 Boyce Road, Pittsburgh"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="map-bar">
+              <span class="map-bar-name">Basu Pancholi LLC CPA</span>
+              <span class="map-bar-cta">Open in Google Maps &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </address>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrap reveal">
+        <h2>Request a Consultation</h2>
+        <p class="form-intro">Fill out the form and we'll get back to you within one business day.</p>
+        <form class="contact-form" action="https://api.keithkelly.dev/contact/basu-pancholi-llc-cpa" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="type">I need help with</label>
+            <select id="type" name="type" required>
+              <option value="" disabled selected>Select a service</option>
+              <option value="taxes">Tax Preparation</option>
+              <option value="bookkeeping">Bookkeeping</option>
+              <option value="payroll">Payroll</option>
+              <option value="irs">IRS Representation</option>
+              <option value="startup">Business Start-Up</option>
+              <option value="advisory">Advisory &amp; Assurance</option>
+              <option value="indian-investors">Cross-Border (India/U.S.)</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Tell us a bit about your situation</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--gold form-submit">Send Request</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section class="service-area" aria-labelledby="area-heading">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">Service Area</p>
+        <h2 id="area-heading">Serving the greater Pittsburgh area.</h2>
+        <p class="area-text">We handle accounting and bookkeeping for clients throughout Pittsburgh, including South Hills, Brownsville Road, Monroeville, Green Tree Road, South Fayette, Cranberry, Bethel Park, and Upper St. Clair.</p>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .page-hero {
+    padding: var(--space-2xl) 0 var(--space-xl);
+  }
+
+  .page-intro {
+    font-size: var(--text-lg);
+    color: var(--cream-dim);
+    max-width: 50ch;
+  }
+
+  /* ===== CONTACT GRID ===== */
+  .contact-main {
+    padding: var(--space-xl) 0;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  @media (min-width: 900px) {
+    .contact-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg);
+    }
+  }
+
+  /* Info blocks */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-style: normal;
+  }
+
+  .info-block {
+    border-left: 2px solid var(--gold-dim);
+    padding-left: 1.5rem;
+  }
+
+  .info-label {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    margin-bottom: 0.35rem;
+  }
+
+  .info-value {
+    font-size: var(--text-lg);
+    color: var(--cream);
+    line-height: 1.5;
+  }
+
+  .info-value a {
+    transition: color var(--duration-fast);
+  }
+
+  .info-value a:hover {
+    color: var(--gold);
+  }
+
+  .hours-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.25rem 1.5rem;
+  }
+
+  .hours-day {
+    font-size: var(--text-sm);
+    color: var(--cream);
+  }
+
+  .hours-time {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--gold);
+  }
+
+  /* Map */
+  .map-wrap {
+    margin-top: 1rem;
+  }
+
+  .map-link {
+    display: block;
+    overflow: hidden;
+    border: 1px solid oklch(0.30 0.02 260);
+    transition: border-color var(--duration-fast);
+  }
+
+  .map-link:hover {
+    border-color: var(--gold-dim);
+  }
+
+  .map-link:hover img {
+    transform: scale(1.02);
+  }
+
+  .map-link img {
+    width: 100%;
+    height: auto;
+    transition: transform var(--duration-base) var(--ease-out);
+  }
+
+  .map-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: var(--navy-light);
+    gap: 1rem;
+    min-height: 44px;
+  }
+
+  .map-bar-name {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--cream);
+  }
+
+  .map-bar-cta {
+    font-size: var(--text-xs);
+    color: var(--gold);
+    white-space: nowrap;
+  }
+
+  /* ===== FORM ===== */
+  .contact-form-wrap h2 {
+    font-size: var(--text-2xl);
+    margin-bottom: 0.5rem;
+  }
+
+  .form-intro {
+    color: var(--cream-dim);
+    margin-bottom: 2rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 500px) {
+    .form-row { grid-template-columns: 1fr; }
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .form-group label {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--cream-dim);
+    letter-spacing: 0.02em;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.85rem 1rem;
+    background: var(--navy-light);
+    border: 1px solid oklch(0.30 0.02 260);
+    color: var(--cream);
+    font-size: var(--text-base);
+    transition: border-color var(--duration-fast);
+    min-height: 48px;
+  }
+
+  .form-group input:focus-visible,
+  .form-group select:focus-visible,
+  .form-group textarea:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+    border-color: var(--gold);
+  }
+
+  .form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23999' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .form-submit {
+    align-self: flex-start;
+  }
+
+  /* ===== SERVICE AREA ===== */
+  .service-area {
+    padding: var(--space-xl) 0;
+    background: var(--charcoal);
+  }
+
+  .area-text {
+    color: var(--cream-dim);
+    font-size: var(--text-lg);
+    max-width: 60ch;
+    margin-top: 1rem;
+  }
+</style>

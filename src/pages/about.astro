@@ -1,0 +1,352 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import handshakeImg from '../assets/images/4cb2411121d14cab94fb4cfb11f4f056.jpg';
+import missionBgImg from '../assets/images/95d9be60e88844eaa92ed30f871d5bae.jpg';
+---
+
+<Layout title="About | Basu Pancholi LLC CPA" description="Learn about Basu Pancholi LLC, a locally owned CPA firm in Pittsburgh's South Hills area. Trusted accounting, tax preparation, and business consulting.">
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-label">About Us</p>
+      <h1>Locally owned.<br />Personally invested.</h1>
+    </div>
+  </section>
+
+  <div class="bridge-line"></div>
+
+  <!-- Firm Story -->
+  <section class="firm-story" aria-labelledby="story-heading">
+    <div class="container story-layout">
+      <div class="story-image reveal">
+        <Image
+          src={handshakeImg}
+          alt="Professional partnership and trust"
+          layout="constrained"
+          width={640}
+          height={640}
+          loading="lazy"
+        />
+      </div>
+      <div class="story-content reveal">
+        <h2 id="story-heading">Your Pittsburgh<br />Certified Public Accountants</h2>
+        <p>Basu Pancholi LLC Certified Public Accountants is a locally owned and managed accounting, tax preparation, payroll, IRS representation, and business consulting firm located in the South Hills area of Pittsburgh, PA.</p>
+        <p>As the top tax accounting firm in Pittsburgh, we know the ins and outs of the accounting side of your business. As the bridge between you and your success, we help small business owners maximize their wealth and minimize their taxes.</p>
+        <p>We work closely with you to preserve your business. Everyone needs help, especially with the big decisions. Let us help you with yours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="mission" aria-labelledby="mission-heading">
+    <div class="mission-bg">
+      <Image
+        src={missionBgImg}
+        alt="Financial analysis and strategic planning"
+        layout="constrained"
+        width={1280}
+        height={828}
+        loading="lazy"
+      />
+    </div>
+    <div class="mission-overlay"></div>
+    <div class="container mission-content reveal">
+      <p class="section-label" style="color: var(--gold-bright);">Our Mission</p>
+      <h2 id="mission-heading">Committed to delivering<br />exceptional financial services.</h2>
+      <p>We value the success of our clients' businesses and work hard to find solutions to help them achieve their goals. We strive to exceed our client's expectations through the passionate pursuit of our client's needs. We accomplish this by interacting personally with our clients and learning their industries.</p>
+    </div>
+  </section>
+
+  <!-- What We Focus On -->
+  <section class="focus-areas" aria-labelledby="focus-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">What We Do</p>
+        <h2 id="focus-heading">Our areas of focus.</h2>
+      </div>
+      <div class="focus-grid stagger">
+        <div class="focus-item">
+          <h3>Individual &amp; Business Tax Preparation</h3>
+        </div>
+        <div class="focus-item">
+          <h3>Accounting &amp; Bookkeeping</h3>
+        </div>
+        <div class="focus-item">
+          <h3>Payroll Services</h3>
+        </div>
+        <div class="focus-item">
+          <h3>Audit &amp; Assurance</h3>
+        </div>
+        <div class="focus-item">
+          <h3>Financial Projections</h3>
+        </div>
+        <div class="focus-item">
+          <h3>Cash Flow &amp; Budgeting Analysis</h3>
+        </div>
+        <div class="focus-item">
+          <h3>Tax Preparation &amp; Planning</h3>
+        </div>
+        <div class="focus-item">
+          <h3>QuickBooks Help</h3>
+        </div>
+        <div class="focus-item">
+          <h3>IRS Representation</h3>
+        </div>
+        <div class="focus-item">
+          <h3>Business Start-Ups &amp; Restructuring</h3>
+        </div>
+        <div class="focus-item">
+          <h3>Cross-Border Tax (India/U.S.)</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="about-testimonials" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">What They Say</p>
+        <h2 id="testimonials-heading">Not just CPAs. Friends.</h2>
+      </div>
+      <div class="testimonial-stack stagger">
+        <blockquote class="testimonial-block">
+          <p>&ldquo;Basu and Viral have been taking care of my business for a long time now. It doesn't seem like they are CPA's for me but instead they are friends and brothers now. They advise me which is good for my business and for me and I am lucky to have them.&rdquo;</p>
+          <footer>Vijay Kumar</footer>
+        </blockquote>
+        <blockquote class="testimonial-block">
+          <p>&ldquo;We had hired them for our seven companies to do all of our accounting. We found them to be the best at what they do. We are really impressed with their professional job.&rdquo;</p>
+          <footer>Ifren Syed</footer>
+        </blockquote>
+        <blockquote class="testimonial-block">
+          <p>&ldquo;I have been doing all my accounting stuff with Basu Pancholi since long time. So professional, explained each and all stuff. Thanks guys for the service.&rdquo;</p>
+          <footer>Bhupal Rai</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="about-cta">
+    <div class="container">
+      <div class="cta-inner reveal">
+        <h2>Ready to work together?</h2>
+        <p>Reach out for a consultation. No obligation, no pressure.</p>
+        <div class="cta-actions">
+          <a href="/contact" class="btn btn--gold">Request a Consultation</a>
+          <a href="tel:4127201313" class="btn btn--outline">Call 412-720-1313</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .page-hero {
+    padding: var(--space-2xl) 0 var(--space-xl);
+  }
+
+  /* ===== FIRM STORY ===== */
+  .firm-story {
+    padding: var(--space-xl) 0;
+  }
+
+  .story-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .story-layout {
+      grid-template-columns: 2fr 3fr;
+    }
+  }
+
+  .story-image {
+    aspect-ratio: 1;
+    overflow: hidden;
+    position: relative;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(30%) contrast(1.05);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid oklch(0.72 0.12 75 / 0.2);
+      pointer-events: none;
+    }
+  }
+
+  .story-content h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .story-content p {
+    color: var(--cream-dim);
+    margin-bottom: 1rem;
+  }
+
+  /* ===== MISSION ===== */
+  .mission {
+    position: relative;
+    padding: var(--space-2xl) 0;
+    overflow: hidden;
+  }
+
+  .mission-bg {
+    position: absolute;
+    inset: 0;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%) brightness(0.3) contrast(1.2);
+    }
+  }
+
+  .mission-overlay {
+    position: absolute;
+    inset: 0;
+    background: oklch(0.14 0.04 260 / 0.7);
+  }
+
+  .mission-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+  }
+
+  .mission-content h2 {
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+
+  .mission-content p {
+    color: var(--cream);
+    font-size: var(--text-lg);
+    line-height: 1.7;
+  }
+
+  /* ===== FOCUS AREAS ===== */
+  .focus-areas {
+    padding: var(--space-xl) 0;
+  }
+
+  .focus-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    background: oklch(0.24 0.02 260);
+    border: 1px solid oklch(0.24 0.02 260);
+  }
+
+  @media (min-width: 600px) {
+    .focus-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 900px) {
+    .focus-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .focus-item {
+    background: var(--bg-primary);
+    padding: 1.5rem 2rem;
+    transition: background var(--duration-fast);
+  }
+
+  .focus-item:hover {
+    background: var(--navy-light);
+  }
+
+  .focus-item h3 {
+    font-size: var(--text-base);
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: var(--cream);
+  }
+
+  /* ===== TESTIMONIALS ===== */
+  .about-testimonials {
+    padding: var(--space-xl) 0;
+    background: var(--charcoal);
+  }
+
+  .testimonial-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: var(--container-narrow);
+  }
+
+  .testimonial-block {
+    padding-left: 2rem;
+    border-left: 2px solid var(--gold);
+  }
+
+  .testimonial-block p {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-xl);
+    color: var(--cream);
+    line-height: 1.5;
+    max-width: none;
+    margin-bottom: 0.75rem;
+  }
+
+  .testimonial-block footer {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--gold);
+  }
+
+  /* ===== CTA ===== */
+  .about-cta {
+    padding: var(--space-xl) 0;
+  }
+
+  .cta-inner {
+    text-align: center;
+    padding: var(--space-xl);
+    background: var(--charcoal);
+    border: 1px solid oklch(0.30 0.02 260);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .cta-inner h2 { margin-bottom: 0.5rem; }
+
+  .cta-inner p {
+    color: var(--cream-dim);
+    margin: 0 auto 2rem;
+    font-size: var(--text-lg);
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>

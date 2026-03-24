@@ -1,0 +1,307 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import taxImg from '../assets/images/6b0b63_8ee80ad0ea1d45548c3b657728b0a868-mv2.jpg';
+import bookkeepImg from '../assets/images/6b0b63_27178104b2b24d98b570c6a4f17d8c07-mv2.jpg';
+import payrollImg from '../assets/images/40e00778f2b94649b7bf2a64906c4e2c.jpg';
+import irsImg from '../assets/images/469e00d2afd84d4998eb3742185505b1.jpg';
+import startupImg from '../assets/images/6b0b63_845efd2e71a04adf9a145bb95046fd4f-mv2.jpg';
+import advisoryImg from '../assets/images/9441146dbd3b4a31a35f513916b26942.jpg';
+---
+
+<Layout title="Services | Basu Pancholi LLC CPA" description="Full-service CPA firm offering tax preparation, bookkeeping, payroll, IRS representation, business start-ups, and advisory services in Pittsburgh, PA.">
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-label">Our Services</p>
+      <h1>We handle the numbers.<br />You handle the business.</h1>
+      <p class="page-intro">From tax preparation to IRS defense, from startup formation to audit assurance. A full accounting practice built around your needs.</p>
+    </div>
+  </section>
+
+  <div class="bridge-line"></div>
+
+  <!-- Taxes -->
+  <section class="service-detail" id="taxes" aria-labelledby="taxes-heading">
+    <div class="container service-layout">
+      <div class="service-detail-image duotone reveal">
+        <Image src={taxImg} alt="Tax preparation consultation" layout="constrained" width={308} height={340} loading="lazy" />
+      </div>
+      <div class="service-detail-content reveal">
+        <span class="service-number">01</span>
+        <h2 id="taxes-heading">Tax Preparation &amp; Planning</h2>
+        <p>Tax laws are complicated and change every year. Using tax software or doing it yourself can limit your return. Our CPAs know the ins and outs of tax preparation and can help you implement strategies to maximize your income and legally reduce the taxes you pay.</p>
+        <ul class="service-list">
+          <li>Individual and business tax preparation</li>
+          <li>Federal, state, and local returns</li>
+          <li>LLCs, partnerships, corporations, trusts, and non-profits</li>
+          <li>Tax planning and strategy</li>
+          <li>Multi-state tax compliance</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bookkeeping -->
+  <section class="service-detail alt" id="bookkeeping" aria-labelledby="bookkeeping-heading">
+    <div class="container service-layout reverse">
+      <div class="service-detail-image duotone reveal">
+        <Image src={bookkeepImg} alt="Bookkeeping and accounting work" layout="constrained" width={312} height={340} loading="lazy" />
+      </div>
+      <div class="service-detail-content reveal">
+        <span class="service-number">02</span>
+        <h2 id="bookkeeping-heading">Accounting &amp; Bookkeeping</h2>
+        <p>When it comes to accounting and bookkeeping for Pittsburgh businesses, we do it all. From financial statement preparation to monthly reporting, we can help with all your bookkeeping needs. We also help with accounting software installations.</p>
+        <ul class="service-list">
+          <li>General ledger and financial statement preparation</li>
+          <li>Monthly, quarterly, or annual bookkeeping</li>
+          <li>Accounting system setup and support</li>
+          <li>QuickBooks help and assistance</li>
+          <li>Cash flow and budgeting analysis</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Payroll -->
+  <section class="service-detail" id="payroll" aria-labelledby="payroll-heading">
+    <div class="container service-layout">
+      <div class="service-detail-image duotone reveal">
+        <Image src={payrollImg} alt="Payroll processing" layout="constrained" width={311} height={340} loading="lazy" />
+      </div>
+      <div class="service-detail-content reveal">
+        <span class="service-number">03</span>
+        <h2 id="payroll-heading">Payroll Services</h2>
+        <p>We have a full payroll system to meet your unique business needs. It is as easy as choosing your payroll preferences. Our payroll services are flexible and are as much or as little as you need.</p>
+        <ul class="service-list">
+          <li>Full payroll processing</li>
+          <li>Direct deposit setup</li>
+          <li>Garnishment and child support administration</li>
+          <li>Monthly tax deposits, quarterly and annual returns</li>
+          <li>New hire reporting</li>
+          <li>ACA compliance</li>
+          <li>W-2 and 1099 processing</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- IRS Representation -->
+  <section class="service-detail alt" id="irs" aria-labelledby="irs-heading">
+    <div class="container service-layout reverse">
+      <div class="service-detail-image duotone reveal">
+        <Image src={irsImg} alt="IRS representation and tax resolution" layout="constrained" width={312} height={340} loading="lazy" />
+      </div>
+      <div class="service-detail-content reveal">
+        <span class="service-number">04</span>
+        <h2 id="irs-heading">IRS Representation &amp; Tax Resolution</h2>
+        <p>Facing IRS tax issues can be overwhelming. Our team of experienced CPAs specializes in comprehensive IRS tax resolution services, offering a path to financial relief and peace of mind. Regardless of who filed your taxes, we are here to help.</p>
+        <ul class="service-list">
+          <li>IRS audit defense</li>
+          <li>Offer in Compromise (settle for less than owed)</li>
+          <li>Installment agreements</li>
+          <li>Penalty abatement</li>
+          <li>Innocent spouse relief</li>
+          <li>Currently Not Collectible status</li>
+          <li>Wage garnishment and bank levy release</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Start-Ups -->
+  <section class="service-detail" id="startups" aria-labelledby="startups-heading">
+    <div class="container service-layout">
+      <div class="service-detail-image duotone reveal">
+        <Image src={startupImg} alt="Business start-up consultation" layout="constrained" width={312} height={340} loading="lazy" />
+      </div>
+      <div class="service-detail-content reveal">
+        <span class="service-number">05</span>
+        <h2 id="startups-heading">Business Start-Ups &amp; Restructuring</h2>
+        <p>Whether you're setting up an LLC, S-Corp, or other business structure, our Pittsburgh CPA firm can help. We guide you through entity selection, tax structure, and everything to get your business operational.</p>
+        <ul class="service-list">
+          <li>Entity selection (LLC, S-Corp, C-Corp, Partnership)</li>
+          <li>Business formation and registration</li>
+          <li>Tax structure planning</li>
+          <li>Business restructuring consulting</li>
+          <li>Accounting system setup for new businesses</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advisory -->
+  <section class="service-detail alt" id="advisory" aria-labelledby="advisory-heading">
+    <div class="container service-layout reverse">
+      <div class="service-detail-image duotone reveal">
+        <Image src={advisoryImg} alt="Financial advisory and analysis" layout="constrained" width={312} height={340} loading="lazy" />
+      </div>
+      <div class="service-detail-content reveal">
+        <span class="service-number">06</span>
+        <h2 id="advisory-heading">Assurance &amp; Advisory</h2>
+        <p>We focus on building close client relationships that add long-term value. This includes assuring the solidity of financial records, evaluating procedures, and producing strategies that help clients face the challenges of business planning and execution.</p>
+        <ul class="service-list">
+          <li>Audits, reviews, and compilations</li>
+          <li>Financial projections and forecasting</li>
+          <li>Cost control analysis</li>
+          <li>Technology and procedure evaluation</li>
+          <li>Strategic business consulting</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="service-cta">
+    <div class="container">
+      <div class="cta-inner reveal">
+        <h2>Need help deciding?</h2>
+        <p>Every business is different. Call us and we'll figure out the right services for your situation.</p>
+        <div class="cta-actions">
+          <a href="/contact" class="btn btn--gold">Request a Consultation</a>
+          <a href="tel:4127201313" class="btn btn--outline">Call 412-720-1313</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .page-hero {
+    padding: var(--space-2xl) 0 var(--space-xl);
+  }
+
+  .page-hero h1 {
+    margin-bottom: 1rem;
+  }
+
+  .page-intro {
+    font-size: var(--text-lg);
+    color: var(--cream-dim);
+    max-width: 55ch;
+  }
+
+  /* Service detail sections */
+  .service-detail {
+    padding: var(--space-xl) 0;
+  }
+
+  .service-detail.alt {
+    background: var(--charcoal);
+  }
+
+  .service-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .service-layout {
+      grid-template-columns: 2fr 3fr;
+    }
+
+    .service-layout.reverse {
+      grid-template-columns: 3fr 2fr;
+    }
+
+    .service-layout.reverse .service-detail-image {
+      order: 2;
+    }
+  }
+
+  .service-detail-image {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    position: relative;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .service-number {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--gold-dim);
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .service-detail-content h2 {
+    margin-bottom: 1rem;
+    font-size: var(--text-2xl);
+  }
+
+  .service-detail-content p {
+    color: var(--cream-dim);
+    margin-bottom: 1.5rem;
+  }
+
+  .service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .service-list li {
+    font-size: var(--text-sm);
+    color: var(--cream-dim);
+    padding-left: 1.25rem;
+    position: relative;
+  }
+
+  .service-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 6px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  /* CTA */
+  .service-cta {
+    padding: var(--space-xl) 0;
+  }
+
+  .cta-inner {
+    text-align: center;
+    padding: var(--space-xl);
+    background: var(--charcoal);
+    border: 1px solid oklch(0.30 0.02 260);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .cta-inner h2 { margin-bottom: 0.5rem; }
+
+  .cta-inner p {
+    color: var(--cream-dim);
+    margin: 0 auto 2rem;
+    font-size: var(--text-lg);
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>
